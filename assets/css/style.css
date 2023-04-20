@@ -1,0 +1,590 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: black;
+  --black: #fff;
+}
+
+.darkmode {
+  --white: #fff;
+  --black: black;
+}
+
+a {
+  text-decoration: none !important;
+}
+p {
+  margin: 0 !important;
+}
+
+label span {
+  color: red;
+}
+
+.commonBg {
+  background-color: var(--black);
+  padding: 5%;
+  min-height: 60vh;
+}
+
+/* header */
+
+.sunMode {
+  filter: contrast(0.1) brightness(2);
+  cursor: pointer;
+  width: 30px;
+}
+
+.moonMode {
+  cursor: pointer;
+  width: 30px;
+  border: none;
+  background: none;
+}
+.moonMode i {
+  font-size: 1rem;
+}
+
+#header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.logo h2 {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+.rightHeader {
+  display: flex;
+  gap: 3rem;
+}
+
+.search {
+  background-color: gray;
+  line-height: 30px;
+}
+
+.search input {
+  height: 100%;
+  padding: 0 10px;
+  outline: none;
+}
+
+.search i {
+  text-align: center;
+  padding: 10px;
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userIcon i {
+  font-size: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 10%;
+  border-top: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+nav a {
+  color: var(--white);
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: gray;
+  border-bottom: 2px solid gray;
+}
+
+.books {
+  position: relative;
+}
+
+.books ul {
+  display: none;
+}
+
+.books:hover ul {
+  display: block;
+  position: absolute;
+  background-color: var(--black);
+  list-style: none;
+  padding: 1rem;
+  width: 200px;
+  z-index: 2;
+}
+
+.books ul li {
+  margin-top: 5px;
+}
+
+.books ul li:hover {
+  color: gray;
+}
+
+.homeContent {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 10%;
+  position: relative;
+}
+
+.anime {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeContent .content {
+  position: relative;
+  z-index: 1;
+}
+
+.anime img {
+  width: 600px;
+  opacity: 0.7;
+}
+.homeContent p {
+  font-size: 1.3rem;
+}
+
+footer {
+  background: linear-gradient(
+    137.07deg,
+    #8e4a19 22.92%,
+    #be4e00 37.86%,
+    #fcc704 63.34%
+  );
+  padding: 2rem 5% 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.links a {
+  color: var(--white);
+  padding: 0px 2rem;
+  border-left: 2px solid var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.links a:first-child {
+  border: none;
+}
+
+.links a:hover {
+  color: gray;
+}
+
+hr:not([size]) {
+  height: 2px !important;
+  color: white;
+}
+
+.views {
+  color: var(--white);
+  font-weight: 500;
+}
+
+footer p {
+  color: var(--white);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* publications */
+
+.publications {
+  background-color: var(--black);
+  min-height: 100vh;
+  padding: 2rem 10%;
+}
+
+.publications h3 {
+  text-align: center;
+  color: var(--white);
+  padding: 3rem 0;
+}
+
+.totalResult {
+  color: gray;
+}
+
+.filterBtn {
+  border: 2px solid var(--white);
+  background-color: var(--black);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 5px 10px;
+  position: relative;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.filterDropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: var(--white);
+  padding: 1rem;
+  color: var(--black);
+  width: 200px;
+}
+
+.filterDropdown input {
+  margin-right: 5px;
+}
+
+.pubLists {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 4rem 0;
+}
+
+.cards {
+  width: 200px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.cards img {
+  width: 180px;
+}
+
+.cards h4 {
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.3rem;
+}
+
+.cards h4:hover {
+  opacity: 0.6;
+}
+
+.author {
+  color: rgb(71, 70, 70);
+}
+
+.pagination {
+  justify-content: end;
+}
+
+.page-link {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+}
+
+.page-item.active .page-link {
+  background-color: gray !important;
+}
+
+/* details */
+
+.detail {
+  background-color: var(--black);
+  min-height: 100vh;
+  padding: 2rem 5%;
+}
+
+/* Publish with us */
+
+.publish {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.publish h1 {
+  color: var(--white);
+}
+
+.publish p {
+  color: var(--white);
+}
+
+.contactformdiv {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-content: center;
+  width: 60%;
+  padding: 2rem;
+  background: linear-gradient(
+    137.07deg,
+    #8e4a19 22.92%,
+    #be4e00 37.86%,
+    #fcc704 63.34%
+  );
+  border-radius: 20px;
+}
+
+.contactformdiv1 {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  /* flex: 1; */
+  width: 50%;
+  background-color: rgb(23, 23, 23);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+.homeContactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 1rem;
+}
+
+.contactform label,
+.contactform input,
+.contactform select,
+.contactform textarea {
+  margin-bottom: 5px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+}
+
+.contactform label {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.contactform input,
+.contactform select,
+.contactform textarea {
+  padding: 10px;
+  background-color: #182747;
+  color: var(--white);
+}
+
+.contactform option {
+  color: var(--white);
+}
+
+.contactBtn {
+  font-size: 18px;
+  font-weight: 600;
+  height: 50px;
+  max-width: 60vw;
+  min-width: 200px;
+  width: 70%;
+  background-color: #8f4a1a;
+  color: var(--white);
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+.contactform .d-flex.gap-5 {
+  margin-bottom: 1rem;
+}
+
+.contactform textarea {
+  margin: 0 !important;
+}
+
+.contactContent {
+  background: linear-gradient(
+    137.07deg,
+    #8e4a19 22.92%,
+    #be4e00 37.86%,
+    #fcc704 63.34%
+  );
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contactContent i {
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.contactContent p {
+  color: var(--white);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.contactTitle {
+  -webkit-text-fill-color: transparent;
+  background: #cf29b3;
+  background: linear-gradient(270deg, #cf29b3 0, #1279e0);
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contactBox {
+  background-color: #182747;
+  flex: 1;
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.captcha {
+  display: flex;
+  /* flex-direction: column; */
+  margin-bottom: 20px;
+  width: 200px;
+  gap: 1rem;
+}
+
+.captcha img {
+  height: 46px;
+  background-color: #012765;
+}
+
+.captcha input {
+  width: 150px;
+  height: 46px;
+}
+
+/* return */
+
+.disclaimers h1,
+.disclaimers h3,
+.disclaimers p {
+  color: var(--white);
+  margin-bottom: 1rem !important;
+}
+
+.disclaimers h1 {
+  text-align: center;
+}
+
+.disclaimers h3 {
+  font-weight: 600;
+}
+
+.disclaimers p {
+  font-size: 1.2rem;
+}
+
+.disclaimers ul li {
+  color: var(--white);
+}
+
+/* contact page */
+
+iframe {
+  height: 21rem;
+}
+
+.contactpage h1,
+.contactpage h5,
+.contactpage p {
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .topHeader {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  nav {
+    padding: 1rem 3%;
+  }
+
+  .links {
+    gap: 1rem;
+  }
+
+  .publications {
+    padding: 2rem 8%;
+  }
+
+  .pubLists {
+    justify-content: center;
+  }
+
+  .contactformdiv {
+    width: 80%;
+  }
+}
+
+@media (max-width: 425px) {
+  .contactformdiv {
+    width: 100%;
+  }
+
+  .cards {
+    width: 140px;
+  }
+  .cards img {
+    width: 140px;
+  }
+
+  .search {
+    position: relative;
+  }
+  .fa-search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: black;
+  }
+}
